@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julie Chen — Senior Project Manager</title>
+<meta name="description" content="Senior Project Manager | SAP · PMO · IT Transformation. 10+ years leading SAP implementations, PMO governance, and data-driven IT projects across France, Germany, and the UK. PMP certified.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Julie Chen — Senior Project Manager | SAP · PMO · IT Transformation">
+<meta property="og:description" content="10+ years leading SAP implementations, PMO governance, and data-driven IT projects across France, Germany, and the UK. PMP certified.">
+<meta property="og:image" content="julie_chen_photo.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="julie_chen_photo.jpg">
+<meta name="twitter:title" content="Julie Chen — Senior Project Manager">
+<meta name="twitter:description" content="SAP · PMO · IT Transformation — 10+ years leading enterprise projects across France, Germany, and the UK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A2332;
+    --navy-light: #232F44;
+    --cream: #F7F5F0;
+    --sage: #6B8F71;
+    --ochre: #C9A24B;
+    --brick: #B85C4A;
+    --line: rgba(247,245,240,0.14);
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--cream);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+
+  nav {
+    position: fixed; top:0; left:0; right:0; z-index: 100;
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 18px 40px;
+    background: rgba(26,35,50,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links { display:flex; gap:28px; font-size:14px; letter-spacing:0.02em; align-items:center; }
+  .nav-links span {
+    cursor:pointer; opacity:0.55; transition: opacity .25s;
+    padding-bottom:4px; border-bottom:2px solid transparent;
+  }
+  .nav-links span:hover, .nav-links span.active { opacity:1; border-color: var(--ochre); }
+  .nav-cta {
+    font-family: var(--font-mono); font-size:12.5px; cursor:pointer;
+    border:1px solid var(--ochre); border-radius:20px; padding:6px 14px;
+    color: var(--ochre); text-decoration:none; white-space:nowrap;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: rgba(201,162,75,0.12); }
+  .nav-right { display:flex; align-items:center; gap:16px; }
+  .lang-toggle {
+    font-family: var(--font-mono); font-size:13px; cursor:pointer;
+    border:1px solid var(--line); border-radius:20px; padding:6px 14px;
+    background:transparent; color:var(--cream); transition: border-color .2s;
+  }
+  .lang-toggle:hover { border-color: var(--ochre); }
+  .hamburger {
+    display:none; flex-direction:column; gap:5px; cursor:pointer;
+    background:none; border:none; padding:4px;
+  }
+  .hamburger span { width:22px; height:2px; background: var(--cream); display:block; }
+  .mobile-panel {
+    display:none; position:fixed; top:60px; left:0; right:0; z-index:99;
+    background: var(--navy-light); border-bottom:1px solid var(--line);
+    flex-direction:column; padding: 20px 40px; gap:16px;
+  }
+  .mobile-panel.open { display:flex; }
+  .mobile-panel span { cursor:pointer; opacity:0.75; font-size:15px; }
+  .mobile-panel a.nav-cta { align-self:flex-start; }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display:none; }
+    .hamburger { display:flex; }
+  }
+  @media (min-width: 769px) {
+    .mobile-panel { display:none !important; }
+  }
+
+  .progress-bar {
+    position: fixed; top:0; left:0; height:2px; background: var(--ochre);
+    z-index: 101; width:0%; transition: width .1s linear;
+  }
+
+  section { padding: 140px 40px 100px; max-width: 1100px; margin: 0 auto; }
+
+  .hero { padding-top: 200px; display:flex; align-items:center; gap:60px; flex-wrap:wrap; }
+  .hero-text { flex:1; min-width:280px; }
+  .hero-photo {
+    width:180px; height:180px; border-radius:50%; overflow:hidden;
+    border:2px solid var(--ochre); flex-shrink:0;
+  }
+  .hero-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+  @media(max-width:700px){ .hero{ flex-direction:column-reverse; text-align:center; } .hero-text{ text-align:left; } }
+  .hero-text h1 {
+    font-family: var(--font-display); font-weight:600;
+    font-size: clamp(2.4rem, 5vw, 4rem); line-height:1.05; margin-bottom:18px;
+  }
+  .hero-text .sub { font-size: 1.15rem; opacity:0.75; max-width:640px; }
+  .hero-cta {
+    display:inline-block; margin-top:28px; font-family: var(--font-mono);
+    font-size:14px; border:1px solid var(--ochre); color: var(--ochre);
+    text-decoration:none; padding:10px 22px; border-radius:30px;
+    transition: background .2s;
+  }
+  .hero-cta:hover { background: rgba(201,162,75,0.12); }
+
+  .hub { padding-top: 80px; }
+  .hub-wrap { position:relative; display:flex; gap:32px; flex-wrap:wrap; margin-top:50px; }
+  .hub-line {
+    position:absolute; top:50%; left:0; right:0; height:1px;
+    transform: translateY(-50%); z-index:0; display:none;
+  }
+  @media(min-width:900px){ .hub-line{ display:block; } }
+
+  .hub-card {
+    flex:1; min-width:260px; position:relative; z-index:1;
+    background: var(--navy-light); border:1px solid var(--line);
+    border-radius: 14px; padding: 32px 26px; cursor:pointer;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .hub-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--ochre);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  }
+  .hub-card .tag {
+    font-family: var(--font-mono); font-size:12px; color: var(--ochre);
+    background: rgba(201,162,75,0.12); display:inline-block;
+    padding:4px 10px; border-radius:20px; margin-bottom:18px;
+  }
+  .hub-card h3 { font-family: var(--font-display); font-size:1.5rem; margin-bottom:10px; }
+  .hub-card p { font-size:0.92rem; opacity:0.65; }
+  .hub-card .arrow { margin-top:18px; font-family:var(--font-mono); font-size:13px; opacity:0.5; }
+
+  .section-label {
+    font-family: var(--font-mono); font-size:13px; color: var(--sage);
+    text-transform: uppercase; letter-spacing:0.08em; margin-bottom:12px;
+  }
+  .section-title { font-family: var(--font-display); font-size: 2.1rem; font-weight:600; margin-bottom:14px; }
+  .section-intro { opacity:0.75; max-width: 680px; margin-bottom:50px; font-size:1.02rem; }
+
+  .case {
+    border-top: 1px solid var(--line); padding: 34px 0;
+    display:grid; grid-template-columns: 140px 1fr; gap:30px;
+  }
+  @media(max-width:700px){ .case{ grid-template-columns:1fr; gap:12px; } }
+  .case .meta { font-family: var(--font-mono); font-size:12px; opacity:0.55; }
+  .case .tag {
+    display:inline-block; margin-top:10px; font-family: var(--font-mono);
+    font-size:12px; color: var(--sage); background: rgba(107,143,113,0.12);
+    padding:4px 10px; border-radius:20px;
+  }
+  .case h4 { font-family: var(--font-display); font-size:1.3rem; margin-bottom:8px; font-weight:600; }
+  .case .role { opacity:0.6; font-size:0.9rem; margin-bottom:12px; }
+  .case .note {
+    margin-top:12px; font-size:0.85rem; opacity:0.6; border-left:2px solid var(--brick);
+    padding-left:12px; font-style: italic;
+  }
+  .expand-toggle {
+    margin-top:14px; background:none; border:none; cursor:pointer;
+    font-family: var(--font-mono); font-size:12.5px; color: var(--sage);
+    opacity:0.8; padding:0; display:flex; align-items:center; gap:6px;
+  }
+  .expand-toggle:hover { opacity:1; }
+  .expand-toggle .icon { transition: transform .25s; }
+  .case.expanded .expand-toggle .icon { transform: rotate(45deg); }
+  .detail-content { display:none; margin-top:16px; padding-top:16px; border-top:1px dashed var(--line); font-size:0.9rem; }
+  .detail-content p { opacity:0.75; margin-bottom:10px; }
+  .detail-content p:last-child { margin-bottom:0; }
+  .case.expanded .detail-content { display:block; }
+
+  .learning {
+    background: rgba(0,0,0,0.15); border-radius:16px; padding: 50px 40px;
+    margin: 0 auto; max-width:1100px;
+  }
+  .learning .section-title { font-size:1.5rem; }
+  .learning-grid {
+    display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap:18px; margin-top:24px; font-family: var(--font-mono); font-size:0.85rem;
+  }
+  .learning-grid div { border:1px solid var(--line); border-radius:10px; padding:14px; opacity:0.75; }
+  .learning-grid .val { color: var(--ochre); font-size:1.1rem; display:block; margin-bottom:4px; }
+  .learning-disclaimer { font-size:0.78rem; opacity:0.5; margin-top:20px; max-width:640px; }
+
+  .skills-grid { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+  .skills-group { margin-bottom: 36px; }
+  .skills-group-label {
+    font-family: var(--font-mono); font-size:12px; color: var(--sage);
+    text-transform: uppercase; letter-spacing:0.06em; opacity:0.85;
+  }
+  .skill-chip {
+    font-family: var(--font-mono); font-size:12.5px; border:1px solid var(--line);
+    border-radius:20px; padding:6px 14px; opacity:0.8;
+  }
+
+  .contact { text-align:center; padding-bottom:140px; }
+  .contact h2 { font-family: var(--font-display); font-size:2rem; margin-bottom:16px; }
+  .contact-links { display:flex; gap:20px; justify-content:center; margin-top:24px; }
+  .contact-links a {
+    border:1px solid var(--line); padding:10px 22px; border-radius:30px;
+    text-decoration:none; font-size:0.9rem; transition: border-color .2s;
+  }
+  .contact-links a:hover { border-color: var(--ochre); }
+
+  body.lang-es [data-lang="en"] { display:none; }
+  [data-lang="es"] { display:none; }
+  body.lang-es [data-lang="es"] { display:block; }
+  body.lang-es span[data-lang="es"] { display:inline; }
+  .case .tag[data-lang="es"] { display:none; }
+  .case .tag[data-lang="en"] { display:inline-block; }
+  body.lang-es .case .tag[data-lang="es"] { display:inline-block; }
+  body.lang-es .case .tag[data-lang="en"] { display:none; }
+  .hub-card .tag[data-lang="es"] { display:none; }
+  .hub-card .tag[data-lang="en"] { display:inline-block; }
+  body.lang-es .hub-card .tag[data-lang="es"] { display:inline-block; }
+  body.lang-es .hub-card .tag[data-lang="en"] { display:none; }
+  .tag[data-lang="en"] { display:inline-block; }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav>
+  <div class="nav-links">
+    <span data-section="hub" onclick="scrollToId('hub')" class="active">Home</span>
+    <span data-section="sap" onclick="scrollToId('sap')">SAP</span>
+    <span data-section="pmo" onclick="scrollToId('pmo')">PMO</span>
+    <span data-section="itpm" onclick="scrollToId('itpm')">IT PM</span>
+    <span data-section="learning" onclick="scrollToId('learning')">Process</span>
+    <span data-section="contact" onclick="scrollToId('contact')" data-lang="en">Contact</span>
+    <span data-section="contact" onclick="scrollToId('contact')" data-lang="es">Contacto</span>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta" href="Julie_Chen_CV_EN.pdf" download data-lang="en">Download CV</a>
+    <a class="nav-cta" href="Julie_Chen_CV_ES.pdf" download data-lang="es">Descargar CV</a>
+    <div class="lang-toggle" onclick="toggleLang()" id="langBtn">ES</div>
+    <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <span onclick="scrollToId('hub'); toggleMobileMenu();">Home</span>
+  <span onclick="scrollToId('sap'); toggleMobileMenu();">SAP</span>
+  <span onclick="scrollToId('pmo'); toggleMobileMenu();">PMO</span>
+  <span onclick="scrollToId('itpm'); toggleMobileMenu();">IT PM</span>
+  <span onclick="scrollToId('learning'); toggleMobileMenu();">Process</span>
+  <span onclick="scrollToId('contact'); toggleMobileMenu();" data-lang="en">Contact</span>
+  <span onclick="scrollToId('contact'); toggleMobileMenu();" data-lang="es">Contacto</span>
+  <a class="nav-cta" href="Julie_Chen_CV_EN.pdf" download data-lang="en">Download CV</a>
+  <a class="nav-cta" href="Julie_Chen_CV_ES.pdf" download data-lang="es">Descargar CV</a>
+</div>
+
+<section class="hero" id="hero">
+  <div class="hero-text">
+    <div data-lang="en">
+      <h1>Julie Chen<br>Senior Project Manager</h1>
+      <p class="sub">SAP · PMO · IT Transformation — 10+ years leading SAP implementations, PMO governance, and IT/data-driven transformation projects across France, Germany, and the UK. PMP certified.</p>
+      <a class="hero-cta" href="Julie_Chen_CV_EN.pdf" download>Download CV →</a>
+    </div>
+    <div data-lang="es">
+      <h1>Julie Chen<br>Project Manager Senior</h1>
+      <p class="sub">SAP · PMO · Transformación TI — Más de 10 años liderando implementaciones SAP, gobernanza PMO y proyectos de transformación TI/datos en Francia, Alemania e Inglaterra. Certificación PMP.</p>
+      <a class="hero-cta" href="Julie_Chen_CV_ES.pdf" download>Descargar CV →</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="julie_chen_photo.jpg" alt="Julie Chen">
+  </div>
+</section>
+
+<section class="hub" id="hub">
+  <div data-lang="en">
+    <div class="section-label">Three pillars</div>
+    <p style="max-width:680px; opacity:0.8;">I lead complex, cross-border technology projects end-to-end — from scope definition through go-live and hypercare. My background spans three connected areas.</p>
+  </div>
+  <div data-lang="es">
+    <div class="section-label">Tres pilares</div>
+    <p style="max-width:680px; opacity:0.8;">Lidero proyectos tecnológicos complejos y multinacionales de principio a fin — desde la definición de alcance hasta el go-live y el hypercare. Mi trayectoria abarca tres áreas conectadas.</p>
+  </div>
+
+  <div class="hub-wrap">
+    <svg class="hub-line" viewBox="0 0 1000 4" preserveAspectRatio="none">
+      <line x1="0" y1="2" x2="1000" y2="2" stroke="url(#gradLine)" stroke-width="1.5" stroke-dasharray="4 6">
+        <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="2.5s" repeatCount="indefinite"/>
+      </line>
+      <defs>
+        <linearGradient id="gradLine" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#C9A24B" stop-opacity="0.7"/>
+          <stop offset="50%" stop-color="#6B8F71" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#C9A24B" stop-opacity="0.7"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="hub-card" onclick="scrollToId('sap')">
+      <div class="tag" data-lang="en">2 releases, 200+ people cutovers</div>
+      <div class="tag" data-lang="es">2 releases, cutovers con 200+ personas</div>
+      <h3>SAP</h3>
+      <p data-lang="en">ECC implementation, BW cloud migration, cutover leadership.</p>
+      <p data-lang="es">Implementación ECC, migración BW a la nube, liderazgo de cutover.</p>
+      <div class="arrow">→</div>
+    </div>
+
+    <div class="hub-card" onclick="scrollToId('pmo')">
+      <div class="tag" data-lang="en">€2M+ portfolio</div>
+      <div class="tag" data-lang="es">Portafolio +€2M</div>
+      <h3>PMO</h3>
+      <p data-lang="en">Governance models, KPI frameworks, vendor & CoE coordination.</p>
+      <p data-lang="es">Modelos de gobernanza, frameworks de KPIs, coordinación de proveedores y CoE.</p>
+      <div class="arrow">→</div>
+    </div>
+
+    <div class="hub-card" onclick="scrollToId('itpm')">
+      <div class="tag" data-lang="en">MVP in 3 months</div>
+      <div class="tag" data-lang="es">MVP en 3 meses</div>
+      <h3>IT PM</h3>
+      <p data-lang="en">Data-driven delivery — AI tooling, remote/distributed teams.</p>
+      <p data-lang="es">Entrega orientada a datos — herramientas de IA, equipos remotos/distribuidos.</p>
+      <div class="arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<section id="sap">
+  <div data-lang="en">
+    <div class="section-label">Pillar 1</div>
+    <div class="section-title">SAP</div>
+    <p class="section-intro">Implementation leadership, cloud migration, and release management across SAP ECC environments in multinational settings.</p>
+  </div>
+  <div data-lang="es">
+    <div class="section-label">Pilar 1</div>
+    <div class="section-title">SAP</div>
+    <p class="section-intro">Liderazgo de implementación, migración a la nube y gestión de releases en entornos SAP ECC multinacionales.</p>
+  </div>
+
+  <div class="case">
+    <div class="meta">
+      <span data-lang="en">2019–2021<br>Decathlon France · Lille, France</span>
+      <span data-lang="es">2019–2021<br>Decathlon Francia · Lille, Francia</span>
+    </div>
+    <div>
+      <div data-lang="en">
+        <h4>SAP BW Cloud Migration & Platform Consolidation</h4>
+        <div class="role">BI Project Manager</div>
+        <p>Migrated two separate SAP BW platforms — one linked to ECC, one to FMS — from in-house servers to AWS, then led a second project merging both into a single consolidated BW environment.</p>
+      </div>
+      <div data-lang="es">
+        <h4>Migración Cloud SAP BW y Consolidación de Plataformas</h4>
+        <div class="role">BI Project Manager</div>
+        <p>Migré dos plataformas SAP BW separadas — una vinculada a ECC, otra a FMS — desde servidores in-house hacia AWS, y luego lideré un segundo proyecto para fusionarlas en un entorno BW consolidado único.</p>
+      </div>
+      <div class="tag" data-lang="en">&gt;€400K saved</div>
+      <div class="tag" data-lang="es">&gt;€400K ahorrados</div>
+
+      <button class="expand-toggle" onclick="toggleExpand(this)">
+        <span class="icon">+</span>
+        <span data-lang="en">Details</span>
+        <span data-lang="es">Detalles</span>
+      </button>
+      <div class="detail-content">
+        <p data-lang="en">Also led change management for the migration across 1,000+ users — designing a super-user network, and building query and KPI dictionaries to support adoption on the new consolidated platform.</p>
+        <p data-lang="es">También lideré la gestión del cambio de la migración para más de 1.000 usuarios — diseñando una red de super usuarios y construyendo diccionarios de queries y KPIs para apoyar la adopción de la plataforma consolidada.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="meta">
+      <span data-lang="en">2018–2019<br>Decathlon France · Lille, France</span>
+      <span data-lang="es">2018–2019<br>Decathlon Francia · Lille, Francia</span>
+    </div>
+    <div>
+      <div data-lang="en">
+        <h4>SAP Cutover & Release Management</h4>
+        <div class="role">SAP Expert / Cutover Manager</div>
+        <p>Led delivery of 2 SAP releases, coordinating 200+ people through scope, testing, and hypercare.</p>
+      </div>
+      <div data-lang="es">
+        <h4>Cutover y Gestión de Releases SAP</h4>
+        <div class="role">SAP Expert / Cutover Manager</div>
+        <p>Lideré la entrega de 2 releases SAP, coordinando a más de 200 personas desde el alcance hasta el hypercare.</p>
+      </div>
+      <div class="tag" data-lang="en">First fully remote cutover</div>
+      <div class="tag" data-lang="es">Primer cutover 100% remoto</div>
+
+      <button class="expand-toggle" onclick="toggleExpand(this)">
+        <span class="icon">+</span>
+        <span data-lang="en">Details</span>
+        <span data-lang="es">Detalles</span>
+      </button>
+      <div class="detail-content">
+        <p data-lang="en">Releases included migration to the cloud (on-premise → AWS), functional releases across ECC, FMS, EWM, APO, APR, F&R, and BW, plus technical upgrades.</p>
+        <p data-lang="es">Los releases incluyeron la migración a la nube (on-premise → AWS), releases funcionales en ECC, FMS, EWM, APO, APR, F&R y BW, además de upgrades técnicos.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="meta">
+      <span data-lang="en">2013–2015<br>Precia Molen · England, Poland, Scotland</span>
+      <span data-lang="es">2013–2015<br>Precia Molen · Inglaterra, Polonia, Escocia</span>
+    </div>
+    <div>
+      <div data-lang="en">
+        <h4>SAP ECC International Rollout</h4>
+        <div class="role">International SAP Project Delivery Lead</div>
+        <p>Led SAP ECC deployment across England, Poland, and integration of a newly acquired Scottish entity — reporting directly to the CFO. Managed 2 junior PMs + 4 external consultants across the full project lifecycle.</p>
+      </div>
+      <div data-lang="es">
+        <h4>Despliegue Internacional SAP ECC</h4>
+        <div class="role">Líder de Proyecto Internacional SAP</div>
+        <p>Lideré el despliegue de SAP ECC en Inglaterra y Polonia, e integré una entidad escocesa recién adquirida — reportando directamente al CFO. Gestioné 2 PMs junior + 4 consultores externos durante todo el ciclo de vida del proyecto.</p>
+      </div>
+      <div class="tag" data-lang="en">3 deliveries, 2 years</div>
+      <div class="tag" data-lang="es">3 entregas, 2 años</div>
+
+      <button class="expand-toggle" onclick="toggleExpand(this)">
+        <span class="icon">+</span>
+        <span data-lang="en">Details</span>
+        <span data-lang="es">Detalles</span>
+      </button>
+      <div class="detail-content">
+        <p data-lang="en">Managed integrator relationship, led user training and documentation, and ran FIT/GAP analysis between HQ and local requirements. Modules: SD, MM, FI-CO, PP, CS.</p>
+        <p data-lang="es">Gestioné la relación con el integrador, lideré la capacitación de usuarios y la redacción de documentación, y realicé análisis FIT/GAP entre requerimientos de casa matriz y locales. Módulos: SD, MM, FI-CO, PP, CS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pmo">
+  <div data-lang="en">
+    <div class="section-label">Pillar 2</div>
+    <div class="section-title">PMO</div>
+    <p class="section-intro">Building governance from scratch — portfolio structures, KPI frameworks, and vendor coordination at scale.</p>
+  </div>
+  <div data-lang="es">
+    <div class="section-label">Pilar 2</div>
+    <div class="section-title">PMO</div>
+    <p class="section-intro">Construcción de gobernanza desde cero — estructuras de portafolio, frameworks de KPIs y coordinación de proveedores a gran escala.</p>
+  </div>
+
+  <div class="case">
+    <div class="meta">
+      <span data-lang="en">2021–2023<br>Decathlon France</span>
+      <span data-lang="es">2021–2023<br>Decathlon Francia</span>
+    </div>
+    <div>
+      <div data-lang="en">
+        <h4>Portfolio Governance Model, Built from Scratch</h4>
+        <div class="role">PMO, Value Chain Strategic Initiatives</div>
+        <p>Built a portfolio governance model, reporting structure, and KPI framework from the ground up — not inherited — for an organization of 600+ people and a €2M+ budget.</p>
+      </div>
+      <div data-lang="es">
+        <h4>Modelo de Gobernanza de Portafolio, Construido desde Cero</h4>
+        <div class="role">PMO, Iniciativas Estratégicas Cadena de Valor</div>
+        <p>Construí desde cero un modelo de gobernanza de portafolio, estructura de reporte y framework de KPIs — no heredado — para una organización de más de 600 personas y un presupuesto de +€2M.</p>
+      </div>
+      <div class="tag" data-lang="en">600 people engaged</div>
+      <div class="tag" data-lang="es">600 personas involucradas</div>
+
+      <button class="expand-toggle" onclick="toggleExpand(this)">
+        <span class="icon">+</span>
+        <span data-lang="en">Details</span>
+        <span data-lang="es">Detalles</span>
+      </button>
+      <div class="detail-content">
+        <p data-lang="en">Built KPIs and ensured data collection for reporting; managed budget and prioritization of initiatives across business units; built change management (training, sensitization, ways of working).</p>
+        <p data-lang="es">Construí KPIs y aseguré la recolección de datos para reportería; gestioné el presupuesto y la priorización de iniciativas entre unidades de negocio; construí la gestión del cambio (capacitación, sensibilización, formas de trabajo).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="meta">
+      <span data-lang="en">2016<br>McKesson Europe · Germany</span>
+      <span data-lang="es">2016<br>McKesson Europe · Alemania</span>
+    </div>
+    <div>
+      <div data-lang="en">
+        <h4>PMO Coordination, S/4HANA Transition</h4>
+        <div class="role">PMO, SAP Center of Excellence</div>
+        <p>Coordinated the Center of Excellence supporting an S/4HANA transition, growing the team from 15 to 50 people; managed a multi-million euro RFP through to vendor onboarding.</p>
+        <div class="note">Coordination and process role — not PM-lead of the S/4HANA implementation itself.</div>
+      </div>
+      <div data-lang="es">
+        <h4>Coordinación PMO, Transición a S/4HANA</h4>
+        <div class="role">PMO, Center of Excellence SAP</div>
+        <p>Coordiné el Center of Excellence de apoyo a la transición a S/4HANA, con crecimiento del equipo de 15 a 50 personas; gestioné un RFP multimillonario en euros hasta el onboarding del proveedor.</p>
+        <div class="note">Rol de coordinación y procesos — no de liderazgo (PM) de la implementación S/4HANA en sí.</div>
+      </div>
+      <div class="tag" data-lang="en">Multi-M€ RFP → onboarding</div>
+      <div class="tag" data-lang="es">RFP multimillonario → onboarding</div>
+
+      <button class="expand-toggle" onclick="toggleExpand(this)">
+        <span class="icon">+</span>
+        <span data-lang="en">Details</span>
+        <span data-lang="es">Detalles</span>
+      </button>
+      <div class="detail-content">
+        <p data-lang="en">CoE covered release and change management plus level 1/2/3 support, for S/4HANA processes including Procure to Pay, Order to Cash, and Finance. Also designed and documented internal processes (Signavio).</p>
+        <p data-lang="es">El CoE abarcó gestión de releases y cambios, más soporte de nivel 1/2/3, para procesos S/4HANA incluyendo Procure to Pay, Order to Cash y Finanzas. También diseñé y documenté procesos internos (Signavio).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="itpm">
+  <div data-lang="en">
+    <div class="section-label">Pillar 3</div>
+    <div class="section-title">IT PM — Data-Oriented</div>
+    <p class="section-intro">Data-driven delivery, from AI-assisted social-impact tooling to remote-distributed reporting projects.</p>
+  </div>
+  <div data-lang="es">
+    <div class="section-label">Pilar 3</div>
+    <div class="section-title">IT PM — Orientado a Datos</div>
+    <p class="section-intro">Entrega orientada a datos, desde herramientas de impacto social con IA hasta proyectos de reportería remota-distribuida.</p>
+  </div>
+
+  <div class="case">
+    <div class="meta">
+      <span data-lang="en">2025–Present<br>Data for Good (France) · Remote from Chile</span>
+      <span data-lang="es">2025–Presente<br>Data for Good (Francia) · Remoto desde Chile</span>
+    </div>
+    <div>
+      <div data-lang="en">
+        <h4>AI Tool for Cyberbullying Evidence Collection</h4>
+        <div class="role">Project Manager (volunteer)</div>
+        <p>Leading a volunteer PM role for an AI-driven tool supporting evidence collection in cyberbullying cases — data pipeline coordination, cross-functional volunteer team management.</p>
+      </div>
+      <div data-lang="es">
+        <h4>Herramienta con IA para Recopilación de Evidencia de Cyberbullying</h4>
+        <div class="role">Project Manager (voluntariado)</div>
+        <p>Lidero un rol de PM voluntario para una herramienta con IA que apoya la recopilación de evidencia en casos de cyberbullying — coordinación de pipeline de datos, gestión de equipo voluntario multidisciplinario.</p>
+      </div>
+      <div class="tag" data-lang="en">MVP delivered in 3 months</div>
+      <div class="tag" data-lang="es">MVP entregado en 3 meses</div>
+
+      <button class="expand-toggle" onclick="toggleExpand(this)">
+        <span class="icon">+</span>
+        <span data-lang="en">Details</span>
+        <span data-lang="es">Detalles</span>
+      </button>
+      <div class="detail-content">
+        <p data-lang="en">Recruited and onboarded volunteers, managed progress status and communication, and maintained the relationship with the sponsoring association.</p>
+        <p data-lang="es">Recluté e incorporé voluntarios, gestioné el estado de avance y la comunicación, y mantuve la relación con la asociación patrocinadora.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="meta">
+      <span data-lang="en">2023–2025<br>Decathlon · Remote from Chile</span>
+      <span data-lang="es">2023–2025<br>Decathlon · Remoto desde Chile</span>
+    </div>
+    <div>
+      <div data-lang="en">
+        <h4>Digital PM, Data & Reporting</h4>
+        <div class="role">Digital Project Manager (Freelance/Remote)</div>
+        <p>Led digital and data-reporting initiatives remotely, translating business requirements into structured data/reporting deliverables.</p>
+      </div>
+      <div data-lang="es">
+        <h4>Digital PM, Datos y Reportería</h4>
+        <div class="role">Digital Project Manager (Freelance/Remoto)</div>
+        <p>Lideré iniciativas digitales y de reportería de datos de forma remota, traduciendo requerimientos de negocio en entregables estructurados de datos/reportería.</p>
+      </div>
+      <div class="tag" data-lang="en">Data quality improved</div>
+      <div class="tag" data-lang="es">Calidad de datos mejorada</div>
+
+      <button class="expand-toggle" onclick="toggleExpand(this)">
+        <span class="icon">+</span>
+        <span data-lang="en">Details</span>
+        <span data-lang="es">Detalles</span>
+      </button>
+      <div class="detail-content">
+        <p data-lang="en">Acted as the bridge between the client and the SaaS product editor/provider (Metrio by Nasdaq, Board) — data flow design and ad hoc analysis, plus process and user guide documentation.</p>
+        <p data-lang="es">Actué como puente entre el cliente y el proveedor/editor del producto SaaS (Metrio de Nasdaq, Board) — diseño de flujo de datos y análisis ad hoc, además de documentación de procesos y guías de usuario.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div data-lang="en">
+    <div class="section-label">Toolkit</div>
+    <div class="section-title">Skills & Certifications</div>
+  </div>
+  <div data-lang="es">
+    <div class="section-label">Herramientas</div>
+    <div class="section-title">Habilidades y Certificaciones</div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skills-group-label" data-lang="en">Certifications</div>
+    <div class="skills-group-label" data-lang="es">Certificaciones</div>
+    <div class="skills-grid">
+      <div class="skill-chip">PMP — PMI, 2023</div>
+      <div class="skill-chip">Data Analyst — Mines Paris, 2026</div>
+      <div class="skill-chip">Sustainable Supply Chain Mgmt — Cambridge, 2021</div>
+      <div class="skill-chip">ITIL Foundation — 2016</div>
+    </div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skills-group-label" data-lang="en">SAP Systems</div>
+    <div class="skills-group-label" data-lang="es">Sistemas SAP</div>
+    <div class="skills-grid">
+      <div class="skill-chip">SAP ECC</div>
+      <div class="skill-chip">SAP BW</div>
+      <div class="skill-chip">SAP Analytics Cloud</div>
+      <div class="skill-chip">SAP S/4HANA (coordination/QA)</div>
+    </div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skills-group-label" data-lang="en">PM & Data Tools</div>
+    <div class="skills-group-label" data-lang="es">Herramientas PM y Datos</div>
+    <div class="skills-grid">
+      <div class="skill-chip">Jira</div>
+      <div class="skill-chip">Confluence</div>
+      <div class="skill-chip">Talend</div>
+      <div class="skill-chip">Tableau</div>
+      <div class="skill-chip">Power BI</div>
+      <div class="skill-chip">Databricks / SQL</div>
+    </div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skills-group-label" data-lang="en">Languages</div>
+    <div class="skills-group-label" data-lang="es">Idiomas</div>
+    <div class="skills-grid">
+      <div class="skill-chip">French — C2</div>
+      <div class="skill-chip">English — C2</div>
+      <div class="skill-chip">Spanish — C1</div>
+    </div>
+  </div>
+</section>
+
+<section id="learning">
+  <div class="learning">
+    <div data-lang="en">
+      <div class="section-label">Behind the scenes</div>
+      <div class="section-title">Continuous Learning</div>
+      <p style="opacity:0.75; max-width:640px;">Staying current isn't a side interest — it's part of how I approach project management. This site itself was built using AI-assisted ("vibe coding") development, tracked the same way I'd track any project.</p>
+    </div>
+    <div data-lang="es">
+      <div class="section-label">Detrás de escena</div>
+      <div class="section-title">Aprendizaje Continuo</div>
+      <p style="opacity:0.75; max-width:640px;">Mantenerme actualizada no es un interés paralelo — es parte de cómo entiendo la gestión de proyectos. Este sitio fue construido usando desarrollo asistido por IA ("vibe coding"), documentado igual que cualquier proyecto.</p>
+    </div>
+
+    <div class="learning-grid">
+      <div><span class="val">4 hours*</span><span data-lang="en">Time invested</span><span data-lang="es">Tiempo invertido</span></div>
+      <div><span class="val">~26,000 tokens*</span><span data-lang="en">Estimated usage</span><span data-lang="es">Uso estimado</span></div>
+      <div><span class="val">~$0.20*</span><span data-lang="en">Est. equivalent cost</span><span data-lang="es">Costo equivalente est.</span></div>
+    </div>
+
+    <p class="learning-disclaimer" data-lang="en">*Figures are estimates, not measured invoices. Time invested is self-reported, not tracked automatically. Token count uses a standard word-to-token approximation (chat interfaces don't expose exact usage) and is frozen as of Aug 4, 2026. Cost applies Claude Sonnet 5's published API rates to that estimate. Energy and water figures were considered but removed — the available per-query estimates didn't hold up to scrutiny as an honest basis for this site's numbers.</p>
+    <p class="learning-disclaimer" data-lang="es">*Las cifras son estimaciones, no facturas medidas. El tiempo invertido es autoreportado, no medido automáticamente. El conteo de tokens usa una aproximación estándar de palabras a tokens (las interfaces de chat no exponen el uso exacto) y está congelado al 4 de agosto de 2026. El costo aplica las tarifas públicas de la API de Claude Sonnet 5 a esa estimación. Las cifras de energía y agua fueron consideradas pero eliminadas — las estimaciones por consulta disponibles no resistieron el escrutinio como base honesta para las cifras de este sitio.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div data-lang="en">
+    <h2>Let's talk</h2>
+    <p style="opacity:0.7;">Based in Santiago, Chile. Open to project-based and fixed-term SAP/PM engagements.</p>
+  </div>
+  <div data-lang="es">
+    <h2>Conversemos</h2>
+    <p style="opacity:0.7;">Radicada en Santiago, Chile. Disponible para proyectos y contratos de plazo fijo en SAP/PM.</p>
+  </div>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/juliecchen" target="_blank">LinkedIn</a>
+    <a href="mailto:juliechrystelle.chen@gmail.com">Email</a>
+    <a href="Julie_Chen_CV_EN.pdf" download data-lang="en">Download CV</a>
+    <a href="Julie_Chen_CV_ES.pdf" download data-lang="es">Descargar CV</a>
+  </div>
+</section>
+
+<script>
+function scrollToId(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+function toggleLang(){
+  const body = document.body;
+  const btn = document.getElementById('langBtn');
+  if(body.classList.contains('lang-es')){
+    body.classList.remove('lang-es');
+    btn.textContent = 'ES';
+  } else {
+    body.classList.add('lang-es');
+    btn.textContent = 'EN';
+  }
+}
+function toggleMobileMenu(){
+  document.getElementById('mobilePanel').classList.toggle('open');
+}
+function toggleExpand(btn){
+  btn.closest('.case').classList.toggle('expanded');
+}
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+const sections = ['hub','sap','pmo','itpm','learning','contact'];
+const navSpans = document.querySelectorAll('.nav-links span[data-section]');
+window.addEventListener('scroll', () => {
+  let current = 'hub';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if(el && window.scrollY >= el.offsetTop - 200) current = id;
+  });
+  navSpans.forEach(s => {
+    s.classList.toggle('active', s.getAttribute('data-section') === current);
+  });
+});
+</script>
+
+</body>
+</html>
