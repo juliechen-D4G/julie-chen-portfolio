@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capstone Project — Julie Chen</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%231A2332'/%3E%3Ctext%20x='50'%20y='68'%20font-family='Georgia,serif'%20font-size='52'%20font-weight='700'%20fill='%23C9A24B'%20text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1A2332; --navy-light: #232F44; --cream: #F7F5F0;
+    --sage: #6B8F71; --ochre: #C9A24B; --line: rgba(247,245,240,0.14);
+    --font-display: 'Fraunces', serif; --font-body: 'Inter', sans-serif; --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--navy); color: var(--cream); font-family: var(--font-body);
+    line-height:1.6; padding: 60px 24px 100px;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .back {
+    display:inline-flex; align-items:center; gap:6px; font-family: var(--font-mono);
+    font-size:13px; color: var(--ochre); text-decoration:none; margin-bottom:36px;
+    opacity:0.85;
+  }
+  .back:hover { opacity:1; }
+  .lang-toggle {
+    float:right; font-family: var(--font-mono); font-size:13px; cursor:pointer;
+    border:1px solid var(--line); border-radius:20px; padding:6px 14px;
+    background:transparent; color:var(--cream);
+  }
+  .lang-toggle:hover { border-color: var(--ochre); }
+  h1 {
+    font-family: var(--font-display); font-weight:600; font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 10px; clear:both;
+  }
+  .sub { opacity:0.7; font-size:1rem; margin-bottom:36px; max-width:640px; }
+  .frame {
+    border:1px solid var(--line); border-radius:14px; overflow:hidden;
+    background: var(--navy-light); margin-bottom:24px;
+  }
+  .frame img { width:100%; display:block; }
+  .caption { font-size:0.95rem; opacity:0.8; margin-bottom:8px; }
+  .citation {
+    font-family: var(--font-mono); font-size:0.75rem; opacity:0.45;
+    line-height:1.6; margin-top:20px; padding-top:20px; border-top:1px dashed var(--line);
+  }
+  [data-lang="es"] { display:none; }
+  body.lang-es [data-lang="en"] { display:none; }
+  body.lang-es [data-lang="es"] { display:block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="lang-toggle" onclick="toggleLang()" id="langBtn">ES</div>
+  <a class="back" href="index.html" data-lang="en">← Back to portfolio</a>
+  <a class="back" href="index.html" data-lang="es">← Volver al portafolio</a>
+
+  <div data-lang="en">
+    <h1>Data Analyst Capstone — Global Temperature Anomalies</h1>
+    <p class="sub">Capstone project, Data Analyst certification (Mines Paris) — built in Power BI.</p>
+  </div>
+  <div data-lang="es">
+    <h1>Proyecto Final Data Analyst — Anomalías de Temperatura Global</h1>
+    <p class="sub">Proyecto final, certificación Data Analyst (Mines Paris) — construido en Power BI.</p>
+  </div>
+
+  <div class="frame">
+    <img src="power_bi_capstone.png" alt="Power BI capstone dashboard — global temperature anomalies">
+  </div>
+
+  <p class="citation">GISTEMP Team, 2026: GISS Surface Temperature Analysis (GISTEMP), version 4. NASA Goddard Institute for Space Studies. Dataset accessed 2025-11-01 at https://data.giss.nasa.gov/gistemp/</p>
+</div>
+
+<script>
+function toggleLang(){
+  const body = document.body;
+  const btn = document.getElementById('langBtn');
+  if(body.classList.contains('lang-es')){
+    body.classList.remove('lang-es'); btn.textContent = 'ES';
+  } else {
+    body.classList.add('lang-es'); btn.textContent = 'EN';
+  }
+}
+</script>
+</body>
+</html>

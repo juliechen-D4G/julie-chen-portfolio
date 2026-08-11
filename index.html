@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231A2332'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' font-weight='700' fill='%23C9A24B' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%231A2332'/%3E%3Ctext%20x='50'%20y='68'%20font-family='Georgia,serif'%20font-size='52'%20font-weight='700'%20fill='%23C9A24B'%20text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
 <title>Julie Chen — Senior Project Manager</title>
 <meta name="description" content="Senior Project Manager | SAP · PMO · IT Transformation. 10+ years leading SAP implementations, PMO governance, and data-driven IT projects across France, Germany, and the UK. PMP certified.">
 <meta property="og:type" content="website">
@@ -201,6 +201,16 @@
 
   .skills-grid { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
   .skills-group { margin-bottom: 36px; }
+  .artifact-link { margin-top:16px; }
+  .artifact-link a {
+    font-family: var(--font-mono); font-size:12.5px; color: var(--ochre);
+    text-decoration:none; border-bottom:1px dotted var(--ochre); padding-bottom:2px;
+  }
+  .artifact-link a:hover { opacity:0.8; }
+  .artifact-citation {
+    font-family: var(--font-mono); font-size:0.7rem; opacity:0.4;
+    margin-top:8px; line-height:1.5; max-width:480px;
+  }
   .skills-group-label {
     font-family: var(--font-mono); font-size:12px; color: var(--sage);
     text-transform: uppercase; letter-spacing:0.06em; opacity:0.85;
@@ -218,6 +228,21 @@
     text-decoration:none; font-size:0.9rem; transition: border-color .2s;
   }
   .contact-links a:hover { border-color: var(--ochre); }
+
+  .site-footer {
+    text-align:center; padding: 20px 40px 50px; opacity:0.4;
+    font-family: var(--font-mono); font-size:11.5px; max-width:640px; margin:0 auto;
+  }
+
+  .approach-grid {
+    display:grid; grid-template-columns: repeat(2, 1fr); gap: 36px 44px; margin-top:44px;
+  }
+  @media(max-width:700px){ .approach-grid{ grid-template-columns:1fr; } }
+  .approach-item h4 {
+    font-family: var(--font-display); font-size:1.15rem; font-weight:600;
+    margin-bottom:10px; color: var(--ochre); line-height:1.3;
+  }
+  .approach-item p { font-size:0.92rem; opacity:0.75; }
 
   body.lang-es [data-lang="en"] { display:none; }
   [data-lang="es"] { display:none; }
@@ -244,7 +269,8 @@
     <span data-section="sap" onclick="scrollToId('sap')">SAP</span>
     <span data-section="pmo" onclick="scrollToId('pmo')">PMO</span>
     <span data-section="itpm" onclick="scrollToId('itpm')">IT PM</span>
-    <span data-section="learning" onclick="scrollToId('learning')">Process</span>
+    <span data-section="approach" onclick="scrollToId('approach')" data-lang="en">How I Work</span>
+    <span data-section="approach" onclick="scrollToId('approach')" data-lang="es">Cómo Trabajo</span>
     <span data-section="contact" onclick="scrollToId('contact')" data-lang="en">Contact</span>
     <span data-section="contact" onclick="scrollToId('contact')" data-lang="es">Contacto</span>
   </div>
@@ -263,7 +289,8 @@
   <span onclick="scrollToId('sap'); toggleMobileMenu();">SAP</span>
   <span onclick="scrollToId('pmo'); toggleMobileMenu();">PMO</span>
   <span onclick="scrollToId('itpm'); toggleMobileMenu();">IT PM</span>
-  <span onclick="scrollToId('learning'); toggleMobileMenu();">Process</span>
+  <span onclick="scrollToId('approach'); toggleMobileMenu();" data-lang="en">How I Work</span>
+  <span onclick="scrollToId('approach'); toggleMobileMenu();" data-lang="es">Cómo Trabajo</span>
   <span onclick="scrollToId('contact'); toggleMobileMenu();" data-lang="en">Contact</span>
   <span onclick="scrollToId('contact'); toggleMobileMenu();" data-lang="es">Contacto</span>
   <a class="nav-cta" href="Julie_Chen_CV_EN.pdf" download data-lang="en">Download CV</a>
@@ -563,6 +590,10 @@
       <div class="detail-content">
         <p data-lang="en">Recruited and onboarded volunteers, managed progress status and communication, and maintained the relationship with the sponsoring association.</p>
         <p data-lang="es">Recluté e incorporé voluntarios, gestioné el estado de avance y la comunicación, y mantuve la relación con la asociación patrocinadora.</p>
+        <div class="artifact-link">
+          <a href="https://chromewebstore.google.com/detail/bjmmakmdjbdlhghmjobpcnmeefhfajfe?utm_source=item-share-cb" target="_blank" data-lang="en">View extension on Chrome Web Store →</a>
+          <a href="https://chromewebstore.google.com/detail/bjmmakmdjbdlhghmjobpcnmeefhfajfe?utm_source=item-share-cb" target="_blank" data-lang="es">Ver extensión en Chrome Web Store →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -599,6 +630,47 @@
   </div>
 </section>
 
+<section id="approach">
+  <div data-lang="en">
+    <div class="section-label">Working principles</div>
+    <div class="section-title">How I Work</div>
+  </div>
+  <div data-lang="es">
+    <div class="section-label">Principios de trabajo</div>
+    <div class="section-title">Cómo Trabajo</div>
+  </div>
+
+  <div class="approach-grid">
+    <div class="approach-item">
+      <h4 data-lang="en">Plan for what could break, so you have bandwidth for what you didn't see coming.</h4>
+      <h4 data-lang="es">Planifico lo que podría fallar, para tener margen ante lo que no vi venir.</h4>
+      <p data-lang="en">Every cutover builds in the fallback before go-live — not because I expect it to fail, but because the team that already knows its contingency isn't the team that panics during hypercare.</p>
+      <p data-lang="es">Cada cutover incluye el plan de contingencia antes del go-live — no porque espere que falle, sino porque el equipo que ya conoce su plan de respaldo no es el que entra en pánico durante el hypercare.</p>
+    </div>
+
+    <div class="approach-item">
+      <h4 data-lang="en">Precise about scope, wide about impact.</h4>
+      <h4 data-lang="es">Preciso en el alcance, amplio en el impacto.</h4>
+      <p data-lang="en">I'll tell you exactly what I owned versus what I coordinated — and I still design for the whole system, not just my slice of it.</p>
+      <p data-lang="es">Te diré exactamente qué lideré versus qué coordiné — y aun así diseño pensando en todo el sistema, no solo en mi parte.</p>
+    </div>
+
+    <div class="approach-item">
+      <h4 data-lang="en">Systems don't adopt themselves — people do.</h4>
+      <h4 data-lang="es">Los sistemas no se adoptan solos — las personas lo hacen.</h4>
+      <p data-lang="en">I ask more questions than most PMs are comfortable with, because adoption breaks on the detail nobody thought to mention.</p>
+      <p data-lang="es">Hago más preguntas de las que la mayoría de los PMs consideran cómodas, porque la adopción se rompe en el detalle que nadie mencionó.</p>
+    </div>
+
+    <div class="approach-item">
+      <h4 data-lang="en">Say it, then close it.</h4>
+      <h4 data-lang="es">Decirlo, y luego cerrarlo.</h4>
+      <p data-lang="en">A commitment isn't done when it's promised — it's done when it's tracked to closure. Same instinct behind every KPI framework I've built, including the numbers on this page.</p>
+      <p data-lang="es">Un compromiso no está cumplido cuando se promete — está cumplido cuando se rastrea hasta el cierre. El mismo instinto detrás de cada framework de KPIs que he construido, incluyendo las cifras de esta página.</p>
+    </div>
+  </div>
+</section>
+
 <section id="skills">
   <div data-lang="en">
     <div class="section-label">Toolkit</div>
@@ -617,6 +689,11 @@
       <div class="skill-chip">Data Analyst — Mines Paris, 2026</div>
       <div class="skill-chip">Sustainable Supply Chain Mgmt — Cambridge, 2021</div>
       <div class="skill-chip">ITIL Foundation — 2016</div>
+    </div>
+
+    <div class="artifact-link">
+      <a href="capstone_project.html" target="_blank" data-lang="en">See capstone project — Data Analyst cert. (Power BI) →</a>
+      <a href="capstone_project.html" target="_blank" data-lang="es">Ver proyecto final — cert. Data Analyst (Power BI) →</a>
     </div>
   </div>
 
@@ -655,30 +732,6 @@
   </div>
 </section>
 
-<section id="learning">
-  <div class="learning">
-    <div data-lang="en">
-      <div class="section-label">Behind the scenes</div>
-      <div class="section-title">Continuous Learning</div>
-      <p style="opacity:0.75; max-width:640px;">Staying current isn't a side interest — it's part of how I approach project management. This site itself was built using AI-assisted ("vibe coding") development, tracked the same way I'd track any project.</p>
-    </div>
-    <div data-lang="es">
-      <div class="section-label">Detrás de escena</div>
-      <div class="section-title">Aprendizaje Continuo</div>
-      <p style="opacity:0.75; max-width:640px;">Mantenerme actualizada no es un interés paralelo — es parte de cómo entiendo la gestión de proyectos. Este sitio fue construido usando desarrollo asistido por IA ("vibe coding"), documentado igual que cualquier proyecto.</p>
-    </div>
-
-    <div class="learning-grid">
-      <div><span class="val">4 hours*</span><span data-lang="en">Time invested</span><span data-lang="es">Tiempo invertido</span></div>
-      <div><span class="val">~26,000 tokens*</span><span data-lang="en">Estimated usage</span><span data-lang="es">Uso estimado</span></div>
-      <div><span class="val">~$0.20*</span><span data-lang="en">Est. equivalent cost</span><span data-lang="es">Costo equivalente est.</span></div>
-    </div>
-
-    <p class="learning-disclaimer" data-lang="en">*Figures are estimates, not measured invoices. Time invested is self-reported, not tracked automatically. Token count uses a standard word-to-token approximation (chat interfaces don't expose exact usage) and is frozen as of Aug 4, 2026. Cost applies Claude Sonnet 5's published API rates to that estimate. Energy and water figures were considered but removed — the available per-query estimates didn't hold up to scrutiny as an honest basis for this site's numbers.</p>
-    <p class="learning-disclaimer" data-lang="es">*Las cifras son estimaciones, no facturas medidas. El tiempo invertido es autoreportado, no medido automáticamente. El conteo de tokens usa una aproximación estándar de palabras a tokens (las interfaces de chat no exponen el uso exacto) y está congelado al 4 de agosto de 2026. El costo aplica las tarifas públicas de la API de Claude Sonnet 5 a esa estimación. Las cifras de energía y agua fueron consideradas pero eliminadas — las estimaciones por consulta disponibles no resistieron el escrutinio como base honesta para las cifras de este sitio.</p>
-  </div>
-</section>
-
 <section class="contact" id="contact">
   <div data-lang="en">
     <h2>Let's talk</h2>
@@ -695,6 +748,11 @@
     <a href="Julie_Chen_CV_ES.pdf" download data-lang="es">Descargar CV</a>
   </div>
 </section>
+
+<footer class="site-footer">
+  <p data-lang="en">Built with AI-assisted development ("vibe coding") — ~4 hours, ~26,000 tokens, ~$0.20 equivalent API cost. Estimates, not measured invoices; frozen as of Aug 4, 2026.</p>
+  <p data-lang="es">Construido con desarrollo asistido por IA ("vibe coding") — ~4 horas, ~26.000 tokens, ~$0,20 costo equivalente de API. Estimaciones, no facturas medidas; congelado al 4 de agosto de 2026.</p>
+</footer>
 
 <script>
 function scrollToId(id){
@@ -722,7 +780,7 @@ window.addEventListener('scroll', () => {
   const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
   document.getElementById('progressBar').style.width = scrolled + '%';
 });
-const sections = ['hub','sap','pmo','itpm','learning','contact'];
+const sections = ['hub','sap','pmo','itpm','approach','contact'];
 const navSpans = document.querySelectorAll('.nav-links span[data-section]');
 window.addEventListener('scroll', () => {
   let current = 'hub';
